@@ -256,10 +256,11 @@ src="https://www.facebook.com/tr?id=2203741067022475&ev=PageView&noscript=1"
 
 <script>
   document.getElementById('joinBtn').addEventListener('click', function(e){
-    e.preventDefault();
-    var target = this.href;
     if (typeof fbq === 'function') { fbq('track', 'Subscribe', {value: 1.00, currency: 'INR'}); }
-    setTimeout(function(){ window.location.href = target; }, 150);
+    // No preventDefault, no setTimeout — let the browser follow the link
+    // immediately within the same click, so mobile browsers (and in-app
+    // browsers like Instagram/Facebook) treat it as a genuine user action
+    // and don't silently block the Telegram join on the first tap.
   });
 </script>
 
