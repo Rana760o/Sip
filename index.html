@@ -8,7 +8,7 @@
 <meta name="facebook-domain-verification" content="h98mqxm5x6qn701al63ntym4avuort" />
 
 <!-- ============================================= -->
-<!-- META PIXEL — replace YOUR_PIXEL_ID below       -->
+<!-- META PIXEL -->
 <!-- ============================================= -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -258,7 +258,7 @@ src="https://www.facebook.com/tr?id=2203741067022475&ev=PageView&noscript=1"
   document.getElementById('joinBtn').addEventListener('click', function(e){
     e.preventDefault();
     var target = this.href;
-    if (typeof fbq === 'function') { fbq('track', 'Subscribe'); }
+    if (typeof fbq === 'function') { fbq('track', 'Subscribe', {value: 1.00, currency: 'INR'}); }
     setTimeout(function(){ window.location.href = target; }, 150);
   });
 </script>
